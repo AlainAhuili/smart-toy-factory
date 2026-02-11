@@ -1,17 +1,15 @@
 Smart Toy Factory
 
-An interconnected network of toy vehicles and wooden machinery communicating via CAN Bus, controlled through a user-friendly interface.
-Project Overview
+An interconnected network of wooden toy vehicles and machinery communicating via CAN Bus, bridging virtual programming with real-world action.
+🚀 The Hybrid Experience
 
-This project bridges physical engineering with software programming by creating a modular, robust automation system based on real-world automotive standards.
+This project moves beyond simulation. Kids write code in a virtual environment (Python) that directly controls physical, motorized wooden toys.
 
-    Communication Protocol: CAN Bus (Controller Area Network)
+    Virtual Goal: Manage a digital factory on screen.
 
-    Vehicles: Remote-controlled wooden cars/trucks.
+    Physical Action: Python scripts command real machinery to move physical blocks and real cars to transport them.
 
-    Machinery: Custom wooden machinery (conveyor belts, robotic arms).
-
-    Control Interface: Python / Scratch bridge for educational accessibility.
+    Real-time Feedback: Sensors on the toys feed data back to the virtual game.
 
 Repository Structure
 
@@ -39,7 +37,22 @@ Software
     PlatformIO or Arduino IDE for C/C++ firmware
 
     Python 3 for the interface gateway
-    
+
+🧠 CAN Bus Protocol Strategy
+
+To ensure seamless interaction between all toys, we use a structured 11-bit CAN ID system.
+🎮 How to Run the Hybrid Game
+1. Setup Physical Hardware
+
+Connect the CAN transceivers to your microcontrollers and connect all nodes together using twisted pair wiring. Connect the Gateway node to your computer via USB.
+2. Flash Firmware
+
+Upload the code from /gateway and /nodes to your respective microcontrollers.
+3. Run the Virtual Controller
+
+Navigate to /programming_ui and run the simulation script:
+
+Kids can now use Python commands like move_crane(position) to manipulate the real toys!
 
 CAN Message ID Allocation Strategy
 
