@@ -39,3 +39,24 @@ Software
     PlatformIO or Arduino IDE for C/C++ firmware
 
     Python 3 for the interface gateway
+    
+
+CAN Message ID Allocation Strategy
+
+We will use the ID to indicate Priority, Device Type, and Instance.
+Priority Mapping
+
+    0-1: Safety Critical (e.g., Emergency Stop, Collision Detect)
+
+    2-4: Movement Control (e.g., Throttle, Steering)
+
+    5-7: Monitoring/Status (e.g., Battery level, Position feedback)
+
+Example Message Table
+Data Payload Structure
+
+For movement messages, use a simple 2-byte or 4-byte payload:
+
+    Byte 0: Command Type (e.g., 0x01 = Set Speed, 0x02 = Set Steering)
+
+    Byte 1: Value (e.g., 0-100 or -127 to 127)
